@@ -1,0 +1,365 @@
+{
+    "main": {
+        "F0_main_BB0": {
+            "F0_main_BB0_INS0_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS1_alloca"
+                ],
+                "df_inputs": [
+                    "main_Constant0"
+                ],
+                "df_outputs": [
+                    "main_%tmp"
+                ]
+            },
+            "F0_main_BB0_INS10_br": {
+                "call": "",
+                "cf_outputs": [
+                    "bb6"
+                ],
+                "df_inputs": null,
+                "df_outputs": null
+            },
+            "F0_main_BB0_INS1_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS2_alloca"
+                ],
+                "df_inputs": [
+                    "main_Constant1"
+                ],
+                "df_outputs": [
+                    "main_%tmp1"
+                ]
+            },
+            "F0_main_BB0_INS2_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS3_alloca"
+                ],
+                "df_inputs": [
+                    "main_Constant2"
+                ],
+                "df_outputs": [
+                    "main_%tmp2"
+                ]
+            },
+            "F0_main_BB0_INS3_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS4_alloca"
+                ],
+                "df_inputs": [
+                    "main_Constant3"
+                ],
+                "df_outputs": [
+                    "main_%tmp3"
+                ]
+            },
+            "F0_main_BB0_INS4_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS5_store"
+                ],
+                "df_inputs": [
+                    "main_Constant4"
+                ],
+                "df_outputs": [
+                    "main_%tmp4"
+                ]
+            },
+            "F0_main_BB0_INS5_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS6_store"
+                ],
+                "df_inputs": [
+                    "main_Constant5"
+                ],
+                "df_outputs": [
+                    "main_%tmp"
+                ]
+            },
+            "F0_main_BB0_INS6_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS7_store"
+                ],
+                "df_inputs": [
+                    "main_Constant6"
+                ],
+                "df_outputs": [
+                    "main_%tmp4"
+                ]
+            },
+            "F0_main_BB0_INS7_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS8_load"
+                ],
+                "df_inputs": [
+                    "main_Constant7"
+                ],
+                "df_outputs": [
+                    "main_%tmp1"
+                ]
+            },
+            "F0_main_BB0_INS8_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS9_store"
+                ],
+                "df_inputs": [
+                    "main_%tmp1"
+                ],
+                "df_outputs": [
+                    "main_%tmp5"
+                ]
+            },
+            "F0_main_BB0_INS9_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS10_br"
+                ],
+                "df_inputs": [
+                    "main_%tmp5"
+                ],
+                "df_outputs": [
+                    "main_%tmp2"
+                ]
+            }
+        },
+        "F0_main_BB1": {
+            "F0_main_BB1_INS0_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB1_INS1_icmp"
+                ],
+                "df_inputs": [
+                    "main_%tmp2"
+                ],
+                "df_outputs": [
+                    "main_%tmp7"
+                ]
+            },
+            "F0_main_BB1_INS1_icmp": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB1_INS2_br"
+                ],
+                "df_inputs": [
+                    "main_%tmp7",
+                    "main_Constant8"
+                ],
+                "df_outputs": [
+                    "main_%tmp8"
+                ]
+            },
+            "F0_main_BB1_INS2_br": {
+                "call": "",
+                "cf_outputs": [
+                    "bb21",
+                    "bb9"
+                ],
+                "df_inputs": [
+                    "main_%tmp8"
+                ],
+                "df_outputs": null
+            }
+        },
+        "F0_main_BB2": {
+            "F0_main_BB2_INS0_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS1_srem"
+                ],
+                "df_inputs": [
+                    "main_%tmp2"
+                ],
+                "df_outputs": [
+                    "main_%tmp10"
+                ]
+            },
+            "F0_main_BB2_INS10_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS11_load"
+                ],
+                "df_inputs": [
+                    "main_%tmp18"
+                ],
+                "df_outputs": [
+                    "main_%tmp4"
+                ]
+            },
+            "F0_main_BB2_INS11_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS12_sdiv"
+                ],
+                "df_inputs": [
+                    "main_%tmp2"
+                ],
+                "df_outputs": [
+                    "main_%tmp19"
+                ]
+            },
+            "F0_main_BB2_INS12_sdiv": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS13_store"
+                ],
+                "df_inputs": [
+                    "main_%tmp19",
+                    "main_Constant10"
+                ],
+                "df_outputs": [
+                    "main_%tmp20"
+                ]
+            },
+            "F0_main_BB2_INS13_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS14_br"
+                ],
+                "df_inputs": [
+                    "main_%tmp20"
+                ],
+                "df_outputs": [
+                    "main_%tmp2"
+                ]
+            },
+            "F0_main_BB2_INS14_br": {
+                "call": "",
+                "cf_outputs": [
+                    "bb6"
+                ],
+                "df_inputs": null,
+                "df_outputs": null
+            },
+            "F0_main_BB2_INS1_srem": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS2_store"
+                ],
+                "df_inputs": [
+                    "main_%tmp10",
+                    "main_Constant9"
+                ],
+                "df_outputs": [
+                    "main_%tmp11"
+                ]
+            },
+            "F0_main_BB2_INS2_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS3_load"
+                ],
+                "df_inputs": [
+                    "main_%tmp11"
+                ],
+                "df_outputs": [
+                    "main_%tmp3"
+                ]
+            },
+            "F0_main_BB2_INS3_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS4_load"
+                ],
+                "df_inputs": [
+                    "main_%tmp3"
+                ],
+                "df_outputs": [
+                    "main_%tmp12"
+                ]
+            },
+            "F0_main_BB2_INS4_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS5_mul"
+                ],
+                "df_inputs": [
+                    "main_%tmp3"
+                ],
+                "df_outputs": [
+                    "main_%tmp13"
+                ]
+            },
+            "F0_main_BB2_INS5_mul": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS6_load"
+                ],
+                "df_inputs": [
+                    "main_%tmp12",
+                    "main_%tmp13"
+                ],
+                "df_outputs": [
+                    "main_%tmp14"
+                ]
+            },
+            "F0_main_BB2_INS6_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS7_mul"
+                ],
+                "df_inputs": [
+                    "main_%tmp3"
+                ],
+                "df_outputs": [
+                    "main_%tmp15"
+                ]
+            },
+            "F0_main_BB2_INS7_mul": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS8_load"
+                ],
+                "df_inputs": [
+                    "main_%tmp14",
+                    "main_%tmp15"
+                ],
+                "df_outputs": [
+                    "main_%tmp16"
+                ]
+            },
+            "F0_main_BB2_INS8_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS9_add"
+                ],
+                "df_inputs": [
+                    "main_%tmp4"
+                ],
+                "df_outputs": [
+                    "main_%tmp17"
+                ]
+            },
+            "F0_main_BB2_INS9_add": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB2_INS10_store"
+                ],
+                "df_inputs": [
+                    "main_%tmp17",
+                    "main_%tmp16"
+                ],
+                "df_outputs": [
+                    "main_%tmp18"
+                ]
+            }
+        },
+        "F0_main_BB3": {
+            "F0_main_BB3_INS0_ret": {
+                "call": "",
+                "cf_outputs": null,
+                "df_inputs": [
+                    "main_Constant11"
+                ],
+                "df_outputs": null
+            }
+        }
+    }
+}

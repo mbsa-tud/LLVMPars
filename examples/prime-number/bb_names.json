@@ -1,0 +1,34 @@
+{
+    "main": {
+        "bb": {
+            "F0_main_BB0": 0
+        },
+        "bb10": {
+            "F0_main_BB2": 2
+        },
+        "bb15": {
+            "F0_main_BB3": 3
+        },
+        "bb16": {
+            "F0_main_BB4": 4
+        },
+        "bb17": {
+            "F0_main_BB5": 5
+        },
+        "bb20": {
+            "F0_main_BB6": 6
+        },
+        "bb23": {
+            "F0_main_BB7": 7
+        },
+        "bb24": {
+            "F0_main_BB8": 8
+        },
+        "bb25": {
+            "F0_main_BB9": 9
+        },
+        "bb5": {
+            "F0_main_BB1": 1
+        }
+    }
+}

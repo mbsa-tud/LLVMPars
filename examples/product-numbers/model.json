@@ -1,0 +1,147 @@
+{
+    "main": {
+        "F0_main_BB0": {
+            "F0_main_BB0_INS0_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS1_alloca"
+                ],
+                "df_inputs": [
+                    "main_Constant0"
+                ],
+                "df_outputs": [
+                    "main_%tmp"
+                ]
+            },
+            "F0_main_BB0_INS10_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS11_ret"
+                ],
+                "df_inputs": [
+                    "main_%tmp6"
+                ],
+                "df_outputs": [
+                    "main_%tmp3"
+                ]
+            },
+            "F0_main_BB0_INS11_ret": {
+                "call": "",
+                "cf_outputs": null,
+                "df_inputs": [
+                    "main_Constant7"
+                ],
+                "df_outputs": null
+            },
+            "F0_main_BB0_INS1_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS2_alloca"
+                ],
+                "df_inputs": [
+                    "main_Constant1"
+                ],
+                "df_outputs": [
+                    "main_%tmp1"
+                ]
+            },
+            "F0_main_BB0_INS2_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS3_alloca"
+                ],
+                "df_inputs": [
+                    "main_Constant2"
+                ],
+                "df_outputs": [
+                    "main_%tmp2"
+                ]
+            },
+            "F0_main_BB0_INS3_alloca": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS4_store"
+                ],
+                "df_inputs": [
+                    "main_Constant3"
+                ],
+                "df_outputs": [
+                    "main_%tmp3"
+                ]
+            },
+            "F0_main_BB0_INS4_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS5_store"
+                ],
+                "df_inputs": [
+                    "main_Constant4"
+                ],
+                "df_outputs": [
+                    "main_%tmp"
+                ]
+            },
+            "F0_main_BB0_INS5_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS6_store"
+                ],
+                "df_inputs": [
+                    "main_Constant5"
+                ],
+                "df_outputs": [
+                    "main_%tmp1"
+                ]
+            },
+            "F0_main_BB0_INS6_store": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS7_load"
+                ],
+                "df_inputs": [
+                    "main_Constant6"
+                ],
+                "df_outputs": [
+                    "main_%tmp2"
+                ]
+            },
+            "F0_main_BB0_INS7_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS8_load"
+                ],
+                "df_inputs": [
+                    "main_%tmp1"
+                ],
+                "df_outputs": [
+                    "main_%tmp4"
+                ]
+            },
+            "F0_main_BB0_INS8_load": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS9_fmul"
+                ],
+                "df_inputs": [
+                    "main_%tmp2"
+                ],
+                "df_outputs": [
+                    "main_%tmp5"
+                ]
+            },
+            "F0_main_BB0_INS9_fmul": {
+                "call": "",
+                "cf_outputs": [
+                    "F0_main_BB0_INS10_store"
+                ],
+                "df_inputs": [
+                    "main_%tmp4",
+                    "main_%tmp5"
+                ],
+                "df_outputs": [
+                    "main_%tmp6"
+                ]
+            }
+        }
+    }
+}

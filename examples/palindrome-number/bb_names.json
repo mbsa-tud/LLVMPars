@@ -1,0 +1,25 @@
+{
+    "main": {
+        "bb": {
+            "F0_main_BB0": 0
+        },
+        "bb18": {
+            "F0_main_BB3": 3
+        },
+        "bb22": {
+            "F0_main_BB4": 4
+        },
+        "bb23": {
+            "F0_main_BB5": 5
+        },
+        "bb24": {
+            "F0_main_BB6": 6
+        },
+        "bb6": {
+            "F0_main_BB1": 1
+        },
+        "bb9": {
+            "F0_main_BB2": 2
+        }
+    }
+}
