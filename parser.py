@@ -189,9 +189,15 @@ class LLVMParser:
                           for x in self.bb_names[f_name]
                           if bb_name in self.bb_names[f_name][x]]
                 if bb_seq is not None:
-                    cfc, epc = self.get_cf_cmds(bb_name, bb_seq[0])
+                    cfc, epc, is_stoch = self.get_cf_cmds(bb_name, bb_seq[0])
                     bb['cf_prism_commands'] = cfc
                     bb['ep_prism_commands'] = epc
+
+                    # add increment if stochastic
+                    if is_stoch:
+                        model.add_data('i')
+                        model.add_data_flow('i', bb_name)
+                        model.add_data_flow(bb_name, 'i')
 
         return model
 
@@ -335,6 +341,7 @@ class LLVMParser:
         """
         cfcs = []
         epcs = []
+        is_stoch = False
         if bb_seq_id in self.seq:
             seq = self.seq[bb_seq_id]
             if len(seq) < 2:
@@ -348,6 +355,7 @@ class LLVMParser:
                     cfcs.append("(cf={}) & (i={}) -> (cf'={});".format(
                         bb_name, i, cf_new))
                 epcs.append("(i<{}) -> (i'+1);".format(len(seq)))
+                is_stoch = True
             else:  # Deterministic
                 counter = Counter(seq)
                 if len(counter) < 2:
@@ -361,7 +369,7 @@ class LLVMParser:
                     cfcs.append("(cf={}) -> {}:(cf'={}) + {}:(cf'={});".format(
                         bb_name, prob, cf_new[0], 1 - prob, cf_new[1]))
 
-        return cfcs, epcs
+        return cfcs, epcs, is_stoch
 
     def get_bb_seq(self):
         """
