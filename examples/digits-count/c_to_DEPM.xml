@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <epl>
     <model initial_element="F0_main_BB0">
+        <element compound="True" name="F0_main_BB0"/>
         <element compound="True" name="F0_main_BB1">
             <cfc>(cf=F0_main_BB1) &amp; (i=0) -&gt; (cf'=F0_main_BB2);</cfc>
             <cfc>(cf=F0_main_BB1) &amp; (i=1) -&gt; (cf'=F0_main_BB2);</cfc>
@@ -12,37 +13,94 @@
             <epc>(i&lt;7) -&gt; (i'+1);</epc>
         </element>
         <element compound="True" name="F0_main_BB2"/>
-        <element compound="True" name="F0_main_BB0"/>
         <element compound="True" name="F0_main_BB3"/>
+        <data name="i"/>
+        <control_flow from="F0_main_BB0" to="F0_main_BB1"/>
         <control_flow from="F0_main_BB1" to="F0_main_BB3"/>
         <control_flow from="F0_main_BB1" to="F0_main_BB2"/>
         <control_flow from="F0_main_BB2" to="F0_main_BB1"/>
-        <control_flow from="F0_main_BB0" to="F0_main_BB1"/>
+        <data_flow from="F0_main_BB1" to="i"/>
+        <data_flow from="i" to="F0_main_BB1"/>
+    </model>
+    <model host="F0_main_BB0" initial_element="F0_main_BB0_INS0_alloca">
+        <element name="F0_main_BB0_INS2_alloca">
+            <epc>true -&gt; 0.99:(main_LOCAL_tmp2'=ok)+0.01:(main_LOCAL_tmp2'=error);</epc>
+        </element>
+        <element name="F0_main_BB0_INS3_store">
+            <epc>true -&gt; 0.98:(main_LOCAL_tmp'=ok)+0.02:(main_LOCAL_tmp'=error);</epc>
+        </element>
+        <element name="F0_main_BB0_INS4_store">
+            <epc>true -&gt; 0.98:(main_LOCAL_tmp2'=ok)+0.02:(main_LOCAL_tmp2'=error);</epc>
+        </element>
+        <element name="F0_main_BB0_INS6_br"/>
+        <element name="F0_main_BB0_INS0_alloca">
+            <epc>true -&gt; 0.99:(main_LOCAL_tmp'=ok)+0.01:(main_LOCAL_tmp'=error);</epc>
+        </element>
+        <element name="F0_main_BB0_INS5_store">
+            <epc>true -&gt; 0.98:(main_LOCAL_tmp1'=ok)+0.02:(main_LOCAL_tmp1'=error);</epc>
+        </element>
+        <element name="F0_main_BB0_INS1_alloca">
+            <epc>true -&gt; 0.99:(main_LOCAL_tmp1'=ok)+0.01:(main_LOCAL_tmp1'=error);</epc>
+        </element>
+        <data name="main_LOCAL_tmp2"/>
+        <data name="main_LOCAL_tmp1"/>
+        <data name="main_Constant4"/>
+        <data name="main_Constant3"/>
+        <data name="main_Constant1"/>
+        <data name="main_Constant0"/>
+        <data name="main_Constant2"/>
+        <data name="main_Constant5"/>
+        <data name="main_LOCAL_tmp"/>
+        <control_flow from="F0_main_BB0_INS2_alloca" to="F0_main_BB0_INS3_store"/>
+        <control_flow from="F0_main_BB0_INS3_store" to="F0_main_BB0_INS4_store"/>
+        <control_flow from="F0_main_BB0_INS4_store" to="F0_main_BB0_INS5_store"/>
+        <control_flow from="F0_main_BB0_INS0_alloca" to="F0_main_BB0_INS1_alloca"/>
+        <control_flow from="F0_main_BB0_INS5_store" to="F0_main_BB0_INS6_br"/>
+        <control_flow from="F0_main_BB0_INS1_alloca" to="F0_main_BB0_INS2_alloca"/>
+        <data_flow from="F0_main_BB0_INS2_alloca" to="main_LOCAL_tmp2"/>
+        <data_flow from="main_Constant2" to="F0_main_BB0_INS2_alloca"/>
+        <data_flow from="F0_main_BB0_INS3_store" to="main_LOCAL_tmp"/>
+        <data_flow from="main_Constant3" to="F0_main_BB0_INS3_store"/>
+        <data_flow from="F0_main_BB0_INS4_store" to="main_LOCAL_tmp2"/>
+        <data_flow from="main_Constant4" to="F0_main_BB0_INS4_store"/>
+        <data_flow from="F0_main_BB0_INS0_alloca" to="main_LOCAL_tmp"/>
+        <data_flow from="main_Constant0" to="F0_main_BB0_INS0_alloca"/>
+        <data_flow from="F0_main_BB0_INS5_store" to="main_LOCAL_tmp1"/>
+        <data_flow from="main_Constant5" to="F0_main_BB0_INS5_store"/>
+        <data_flow from="F0_main_BB0_INS1_alloca" to="main_LOCAL_tmp1"/>
+        <data_flow from="main_Constant1" to="F0_main_BB0_INS1_alloca"/>
     </model>
     <model host="F0_main_BB1" initial_element="F0_main_BB1_INS0_load">
-        <element name="F0_main_BB1_INS1_icmp">
-            <epc>true -&gt; 0.96:(main_LOCAL_tmp5'=ok)+0.04:(main_LOCAL_tmp5'=error);</epc>
-        </element>
+        <element name="F0_main_BB1_INS2_br"/>
         <element name="F0_main_BB1_INS0_load">
             <epc>true -&gt; 0.97:(main_LOCAL_tmp4'=ok)+0.03:(main_LOCAL_tmp4'=error);</epc>
         </element>
-        <element name="F0_main_BB1_INS2_br"/>
-        <data name="main_Constant6"/>
+        <element name="F0_main_BB1_INS1_icmp">
+            <epc>true -&gt; 0.96:(main_LOCAL_tmp5'=ok)+0.04:(main_LOCAL_tmp5'=error);</epc>
+        </element>
         <data name="main_LOCAL_tmp5"/>
         <data name="main_LOCAL_tmp4"/>
+        <data name="main_Constant6"/>
         <data name="main_LOCAL_tmp1"/>
-        <control_flow from="F0_main_BB1_INS1_icmp" to="F0_main_BB1_INS2_br"/>
         <control_flow from="F0_main_BB1_INS0_load" to="F0_main_BB1_INS1_icmp"/>
+        <control_flow from="F0_main_BB1_INS1_icmp" to="F0_main_BB1_INS2_br"/>
+        <data_flow from="main_LOCAL_tmp5" to="F0_main_BB1_INS2_br"/>
+        <data_flow from="F0_main_BB1_INS0_load" to="main_LOCAL_tmp4"/>
+        <data_flow from="main_LOCAL_tmp1" to="F0_main_BB1_INS0_load"/>
         <data_flow from="F0_main_BB1_INS1_icmp" to="main_LOCAL_tmp5"/>
         <data_flow from="main_LOCAL_tmp4" to="F0_main_BB1_INS1_icmp"/>
         <data_flow from="main_Constant6" to="F0_main_BB1_INS1_icmp"/>
-        <data_flow from="F0_main_BB1_INS0_load" to="main_LOCAL_tmp4"/>
-        <data_flow from="main_LOCAL_tmp1" to="F0_main_BB1_INS0_load"/>
-        <data_flow from="main_LOCAL_tmp5" to="F0_main_BB1_INS2_br"/>
     </model>
     <model host="F0_main_BB2" initial_element="F0_main_BB2_INS0_load">
+        <element name="F0_main_BB2_INS2_store">
+            <epc>true -&gt; 0.98:(main_LOCAL_tmp1'=ok)+0.02:(main_LOCAL_tmp1'=error);</epc>
+        </element>
+        <element name="F0_main_BB2_INS6_br"/>
         <element name="F0_main_BB2_INS3_load">
             <epc>true -&gt; 0.97:(main_LOCAL_tmp9'=ok)+0.03:(main_LOCAL_tmp9'=error);</epc>
+        </element>
+        <element name="F0_main_BB2_INS4_add">
+            <epc>true -&gt; 0.95:(main_LOCAL_tmp10'=ok)+0.05:(main_LOCAL_tmp10'=error);</epc>
         </element>
         <element name="F0_main_BB2_INS1_sdiv">
             <epc>true -&gt; 0.9:(main_LOCAL_tmp8'=ok)+0.1:(main_LOCAL_tmp8'=error);</epc>
@@ -50,103 +108,48 @@
         <element name="F0_main_BB2_INS0_load">
             <epc>true -&gt; 0.97:(main_LOCAL_tmp7'=ok)+0.03:(main_LOCAL_tmp7'=error);</epc>
         </element>
-        <element name="F0_main_BB2_INS2_store">
-            <epc>true -&gt; 0.98:(main_LOCAL_tmp1'=ok)+0.02:(main_LOCAL_tmp1'=error);</epc>
-        </element>
         <element name="F0_main_BB2_INS5_store">
             <epc>true -&gt; 0.98:(main_LOCAL_tmp2'=ok)+0.02:(main_LOCAL_tmp2'=error);</epc>
         </element>
-        <element name="F0_main_BB2_INS6_br"/>
-        <element name="F0_main_BB2_INS4_add">
-            <epc>true -&gt; 0.95:(main_LOCAL_tmp10'=ok)+0.05:(main_LOCAL_tmp10'=error);</epc>
-        </element>
+        <data name="main_LOCAL_tmp8"/>
         <data name="main_LOCAL_tmp2"/>
         <data name="main_Constant7"/>
-        <data name="main_LOCAL_tmp9"/>
-        <data name="main_LOCAL_tmp10"/>
-        <data name="main_LOCAL_tmp1"/>
-        <data name="main_LOCAL_tmp8"/>
         <data name="main_LOCAL_tmp7"/>
+        <data name="main_LOCAL_tmp10"/>
+        <data name="main_LOCAL_tmp9"/>
+        <data name="main_LOCAL_tmp1"/>
         <data name="main_Constant8"/>
+        <control_flow from="F0_main_BB2_INS2_store" to="F0_main_BB2_INS3_load"/>
         <control_flow from="F0_main_BB2_INS3_load" to="F0_main_BB2_INS4_add"/>
+        <control_flow from="F0_main_BB2_INS4_add" to="F0_main_BB2_INS5_store"/>
         <control_flow from="F0_main_BB2_INS1_sdiv" to="F0_main_BB2_INS2_store"/>
         <control_flow from="F0_main_BB2_INS0_load" to="F0_main_BB2_INS1_sdiv"/>
-        <control_flow from="F0_main_BB2_INS2_store" to="F0_main_BB2_INS3_load"/>
         <control_flow from="F0_main_BB2_INS5_store" to="F0_main_BB2_INS6_br"/>
-        <control_flow from="F0_main_BB2_INS4_add" to="F0_main_BB2_INS5_store"/>
+        <data_flow from="F0_main_BB2_INS2_store" to="main_LOCAL_tmp1"/>
+        <data_flow from="main_LOCAL_tmp8" to="F0_main_BB2_INS2_store"/>
         <data_flow from="F0_main_BB2_INS3_load" to="main_LOCAL_tmp9"/>
         <data_flow from="main_LOCAL_tmp2" to="F0_main_BB2_INS3_load"/>
+        <data_flow from="F0_main_BB2_INS4_add" to="main_LOCAL_tmp10"/>
+        <data_flow from="main_LOCAL_tmp9" to="F0_main_BB2_INS4_add"/>
+        <data_flow from="main_Constant8" to="F0_main_BB2_INS4_add"/>
         <data_flow from="F0_main_BB2_INS1_sdiv" to="main_LOCAL_tmp8"/>
         <data_flow from="main_LOCAL_tmp7" to="F0_main_BB2_INS1_sdiv"/>
         <data_flow from="main_Constant7" to="F0_main_BB2_INS1_sdiv"/>
         <data_flow from="F0_main_BB2_INS0_load" to="main_LOCAL_tmp7"/>
         <data_flow from="main_LOCAL_tmp1" to="F0_main_BB2_INS0_load"/>
-        <data_flow from="F0_main_BB2_INS2_store" to="main_LOCAL_tmp1"/>
-        <data_flow from="main_LOCAL_tmp8" to="F0_main_BB2_INS2_store"/>
         <data_flow from="F0_main_BB2_INS5_store" to="main_LOCAL_tmp2"/>
         <data_flow from="main_LOCAL_tmp10" to="F0_main_BB2_INS5_store"/>
-        <data_flow from="F0_main_BB2_INS4_add" to="main_LOCAL_tmp10"/>
-        <data_flow from="main_LOCAL_tmp9" to="F0_main_BB2_INS4_add"/>
-        <data_flow from="main_Constant8" to="F0_main_BB2_INS4_add"/>
-    </model>
-    <model host="F0_main_BB0" initial_element="F0_main_BB0_INS0_alloca">
-        <element name="F0_main_BB0_INS6_br"/>
-        <element name="F0_main_BB0_INS0_alloca">
-            <epc>true -&gt; 0.99:(main_LOCAL_tmp'=ok)+0.01:(main_LOCAL_tmp'=error);</epc>
-        </element>
-        <element name="F0_main_BB0_INS2_alloca">
-            <epc>true -&gt; 0.99:(main_LOCAL_tmp2'=ok)+0.01:(main_LOCAL_tmp2'=error);</epc>
-        </element>
-        <element name="F0_main_BB0_INS1_alloca">
-            <epc>true -&gt; 0.99:(main_LOCAL_tmp1'=ok)+0.01:(main_LOCAL_tmp1'=error);</epc>
-        </element>
-        <element name="F0_main_BB0_INS5_store">
-            <epc>true -&gt; 0.98:(main_LOCAL_tmp1'=ok)+0.02:(main_LOCAL_tmp1'=error);</epc>
-        </element>
-        <element name="F0_main_BB0_INS4_store">
-            <epc>true -&gt; 0.98:(main_LOCAL_tmp2'=ok)+0.02:(main_LOCAL_tmp2'=error);</epc>
-        </element>
-        <element name="F0_main_BB0_INS3_store">
-            <epc>true -&gt; 0.98:(main_LOCAL_tmp'=ok)+0.02:(main_LOCAL_tmp'=error);</epc>
-        </element>
-        <data name="main_LOCAL_tmp"/>
-        <data name="main_LOCAL_tmp2"/>
-        <data name="main_Constant0"/>
-        <data name="main_Constant2"/>
-        <data name="main_Constant4"/>
-        <data name="main_Constant3"/>
-        <data name="main_LOCAL_tmp1"/>
-        <data name="main_Constant5"/>
-        <data name="main_Constant1"/>
-        <control_flow from="F0_main_BB0_INS0_alloca" to="F0_main_BB0_INS1_alloca"/>
-        <control_flow from="F0_main_BB0_INS2_alloca" to="F0_main_BB0_INS3_store"/>
-        <control_flow from="F0_main_BB0_INS1_alloca" to="F0_main_BB0_INS2_alloca"/>
-        <control_flow from="F0_main_BB0_INS5_store" to="F0_main_BB0_INS6_br"/>
-        <control_flow from="F0_main_BB0_INS4_store" to="F0_main_BB0_INS5_store"/>
-        <control_flow from="F0_main_BB0_INS3_store" to="F0_main_BB0_INS4_store"/>
-        <data_flow from="F0_main_BB0_INS0_alloca" to="main_LOCAL_tmp"/>
-        <data_flow from="main_Constant0" to="F0_main_BB0_INS0_alloca"/>
-        <data_flow from="F0_main_BB0_INS2_alloca" to="main_LOCAL_tmp2"/>
-        <data_flow from="main_Constant2" to="F0_main_BB0_INS2_alloca"/>
-        <data_flow from="F0_main_BB0_INS1_alloca" to="main_LOCAL_tmp1"/>
-        <data_flow from="main_Constant1" to="F0_main_BB0_INS1_alloca"/>
-        <data_flow from="F0_main_BB0_INS5_store" to="main_LOCAL_tmp1"/>
-        <data_flow from="main_Constant5" to="F0_main_BB0_INS5_store"/>
-        <data_flow from="F0_main_BB0_INS4_store" to="main_LOCAL_tmp2"/>
-        <data_flow from="main_Constant4" to="F0_main_BB0_INS4_store"/>
-        <data_flow from="F0_main_BB0_INS3_store" to="main_LOCAL_tmp"/>
-        <data_flow from="main_Constant3" to="F0_main_BB0_INS3_store"/>
     </model>
     <model host="F0_main_BB3" initial_element="F0_main_BB3_INS0_load">
-        <element name="F0_main_BB3_INS1_ret"/>
         <element name="F0_main_BB3_INS0_load">
             <epc>true -&gt; 0.97:(main_LOCAL_tmp12'=ok)+0.03:(main_LOCAL_tmp12'=error);</epc>
         </element>
-        <data name="main_LOCAL_tmp"/>
+        <element name="F0_main_BB3_INS1_ret"/>
         <data name="main_LOCAL_tmp12"/>
+        <data name="main_LOCAL_tmp"/>
         <control_flow from="F0_main_BB3_INS0_load" to="F0_main_BB3_INS1_ret"/>
-        <data_flow from="main_LOCAL_tmp12" to="F0_main_BB3_INS1_ret"/>
         <data_flow from="F0_main_BB3_INS0_load" to="main_LOCAL_tmp12"/>
         <data_flow from="main_LOCAL_tmp" to="F0_main_BB3_INS0_load"/>
+        <data_flow from="main_LOCAL_tmp12" to="F0_main_BB3_INS1_ret"/>
     </model>
 </epl>

@@ -345,7 +345,7 @@ class LLVMParser:
         if bb_seq_id in self.seq:
             seq = self.seq[bb_seq_id]
             if len(seq) < 2:
-                return cfcs, epcs
+                return cfcs, epcs, is_stoch
 
             bb_seq = self.get_bb_seq()
             test = serial_test(seq)
